@@ -16,11 +16,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cognizant.dao.ShowSheduleDao;
 import com.cognizant.entity.TrainingShedule;
+import com.cognizant.service.ShowScheduleService;
 
 @Controller
 public class ViewScheduleController {
 	@Autowired
-	ShowSheduleDao dao;
+	ShowScheduleService showScheduleService;
 	
 	private List<TrainingShedule> trainingShedules = new ArrayList<TrainingShedule>();
 	
@@ -30,15 +31,12 @@ public class ViewScheduleController {
 	}
 
 	@RequestMapping(value = "/viewSchedule1", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody List<TrainingShedule> getviewSchedule1(@RequestParam("startDate") Date date) {
+	public @ResponseBody List<TrainingShedule> getviewSchedule1(@RequestParam("startDate") Date date,Model model) {
 		
-		trainingShedules = dao.retriveShedule(date);
+		trainingShedules = showScheduleService.retriveShedule(date);
 System.out.println(trainingShedules);
-		return trainingShedules;
 
-	}
-
+	return trainingShedules;
 	
-	
-
+}
 }

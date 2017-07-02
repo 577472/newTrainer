@@ -4,14 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>HomePage</title>
 </head>
+<style>
+h1{
+color:blue;
+
+}
+</style>
 <body>
-	<h1>Please provide here the links to the application pages</h1>
-	<!-- Please add your application links by replacing the below sample links -->
+<br>
+	<center><h1>Trainer Management</h1></center>
 	<br>
-	<a href="mvc/applyshedule">Apply</a>
-	<a href="mvc/viewSchedule">view</a>
+	<center><button><a href="mvc/applyshedule">Schedule Training</a></button></center><br><br>
+	<center><button><a href="mvc/viewSchedule">Show Weekly Schedule</a></button></center>
 
 
 </body>

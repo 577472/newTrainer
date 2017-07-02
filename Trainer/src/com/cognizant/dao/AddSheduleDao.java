@@ -2,6 +2,7 @@ package com.cognizant.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,9 +19,21 @@ public class AddSheduleDao {
 	
 	@Transactional
 	public void addShedule(TrainerDetails obj) {
-		// TODO Auto-generated method stub
-		
 		em.persist(obj);
+		
+	}
+	
+	@Transactional
+	public void addShedule1(TrainingShedule trainingShedule) {
+		
+			em.persist(trainingShedule);
+	
+	}
+	@Transactional
+	public TrainerDetails checkTrainerIfAlreadyPresent(int trainerId) {
+		
+		TrainerDetails trainerDetails=em.find(TrainerDetails.class, trainerId);
+		return trainerDetails;
 		
 	}
 

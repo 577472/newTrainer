@@ -23,12 +23,9 @@ public class ShowSheduleTest {
 	
 	@Test
 	public void retriveShedule(){
-		 Date date=new Date(2017,06,29);
-	
-			
+		 Date date=new Date(2017,06,29);	
 			System.out.println(date);
 			dao.retriveShedule(date);
-		
 		
 		
 	}

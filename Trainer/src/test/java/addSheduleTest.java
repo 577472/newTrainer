@@ -27,15 +27,6 @@ public class addSheduleTest {
 	AddSheduleDao dao;
 	private List<TrainingShedule> list=new ArrayList<TrainingShedule>();
 	
-	/*@Before
-	public void setup(){
-		TrainerDetails obj=new TrainerDetails(1200,"ASD","roc","java");
-		Date date=new Date(1/2/2016);
-		TrainingShedule obj1=new TrainingShedule(12345,date,45678,obj);
-		list.add(obj1);
-		
-	}*/
-	
 	@Test
 	public void addShedule(){
 		TrainerDetails obj=new TrainerDetails(1200,"ASD","roc","java");
